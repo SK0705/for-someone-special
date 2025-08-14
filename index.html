@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>For Someone Special ❤</title>
+  <title>For Someone Special ❤️</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
@@ -432,7 +432,7 @@
       for (let i = 0; i < heartCount; i++) {
         const heart = document.createElement('div');
         heart.classList.add('floating-heart');
-        heart.innerHTML = '❤';
+        heart.innerHTML = '❤️';
         heart.style.left = Math.random() * 100 + 'vw';
         heart.style.animationDuration = 10 + Math.random() * 20 + 's';
         heart.style.animationDelay = Math.random() * 15 + 's';
@@ -475,8 +475,8 @@
       confetti.style.borderRadius = shape;
       confetti.style.zIndex = '20';
       confetti.style.pointerEvents = 'none';
-      confetti.style.animation = confettiFall ${3 + Math.random() * 2}s linear forwards;
-      confetti.style.transform = rotate(${Math.random() * 360}deg);
+      confetti.style.animation = `confettiFall ${3 + Math.random() * 2}s linear forwards`;
+      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
       
       document.body.appendChild(confetti);
       setTimeout(() => confetti.remove(), 5000);
@@ -489,12 +489,12 @@
       heart.style.left = Math.random() * window.innerWidth + 'px';
       heart.style.animationDuration = (3 + Math.random() * 3) + 's';
       heart.style.opacity = 0.5 + Math.random() * 0.5;
-      heart.style.transform = scale(${0.5 + Math.random() * 0.7});
+      heart.style.transform = `scale(${0.5 + Math.random() * 0.7})`;
       
       // Random heart color
       const heartColors = ['#ff1493', '#ff69b4', '#FF0033', '#FF3366'];
       const randomColor = heartColors[Math.floor(Math.random() * heartColors.length)];
-      heart.style.filter = drop-shadow(0 0 5px ${randomColor});
+      heart.style.filter = `drop-shadow(0 0 5px ${randomColor})`;
       
       document.getElementById('heartsContainer').appendChild(heart);
       setTimeout(() => heart.remove(), 6000);
@@ -577,4 +577,3 @@
   </script>
 </body>
 </html>
-
