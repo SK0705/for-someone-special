@@ -409,7 +409,7 @@
     <div class="line">with a smile that disarms</div>
     <div class="line">and eyes that carry the power of <span class="highlight">kintsugi</span> —</div>
     <div class="line">strength in beauty, stories in silence.</div>
-    <div class="line"><strong>Happy Birthday, <span class="nameStyle">🎀 SUSHMA 🎀</span>...</strong></div>
+    <div class="line"><strong>Happy Birthday, <span class="nameStyle" id="dynamicName">🎀 SUSHMA 🎀</span>...</strong></div>
     <div class="line">To the one whose laughter lingers</div>
     <div class="line">long after the moment passes.</div>
     <div class="final-line">May your day be as beautiful as the light you bring to others</div>
@@ -420,8 +420,8 @@
     <source src="https://assets.mixkit.co/videos/preview/mixkit-pink-and-blue-hearts-floating-1580-large.mp4" type="video/mp4">
   </video>
   <audio id="bgMusic" loop>
-  <source src="maula_mere_maula_music.mp3" type="audio/mpeg">
-</audio>
+    <source src="maula_mere_maula_music.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
     // Create floating hearts in background
@@ -519,6 +519,9 @@
       document.getElementById('namePrompt').style.display = 'none';
       document.getElementById('countdown').style.display = 'flex';
       document.getElementById('nameDisplay').innerText = name;
+      
+      // Update the name in the birthday message
+      document.getElementById('dynamicName').innerHTML = `🎀 ${name.toUpperCase()} 🎀`;
 
       let count = 3;
       const timerEl = document.getElementById('timer');
